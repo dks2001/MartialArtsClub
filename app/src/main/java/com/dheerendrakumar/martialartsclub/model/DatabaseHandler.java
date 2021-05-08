@@ -58,13 +58,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         SQLiteDatabase database = getWritableDatabase();
         String deleteMartialArtSQLCommand = "delete from " + MARTIAL_ARTS_TABLE +
-                                                " where" + ID_KEY + " = " + id;
+                                                " where " + ID_KEY + " = " + id;
         database.execSQL(deleteMartialArtSQLCommand);
         database.close();
 
     }
 
-    public void modifyMartialArtObject(int martialArtID , String martialArtName , String martialArtPrice , String martialArtColor) {
+    public void modifyMartialArtObject(int martialArtID , String martialArtName , double martialArtPrice , String martialArtColor) {
 
         SQLiteDatabase database = getWritableDatabase();
         String modifySQLMartialArtCommand = "update " + MARTIAL_ARTS_TABLE + " set " +

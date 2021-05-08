@@ -46,4 +46,14 @@ public class MartialArt {
     public void setMartialArtColor(String martialArtColor) {
         this.martialArtColor = martialArtColor;
     }
+
+    @Override
+    public String toString() {
+        return
+                 martialArtID + " , " +
+                 martialArtName + " , " +
+                 martialArtPrice + " , " +
+                 martialArtColor ;
+
+    }
 }
